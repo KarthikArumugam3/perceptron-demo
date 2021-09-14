@@ -4,27 +4,29 @@ from utils.all_utils import prepare_data, save_plot, save_model
 import pandas as pd
 import numpy as np
 
-# AND data
-AND = {
-    'x1': [0,0,1,1],
-    'x2': [0,1,0,1],
-    'y': [0,0,0,1]
-}
 
-df = pd.DataFrame(AND)
-print(df)
+def main(data, modelName, plotName, eta, epochs):
 
+    df = pd.DataFrame(data)
+    print(df) 
 
-# AND model
-X,y = prepare_data(df)
+    X, y = prepare_data(df)
 
-ETA = 0.3 # b/w 0 and 1
-EPOCHS = 10
+    model = Perceptron(eta=eta, epochs=epochs)
+    model.fit(X, y)
+    _ = model.total_loss()
+    
+    save_model(model, filename=modelName)
+    save_plot(df, plotName, model)
 
-model = Perceptron(eta=ETA, epochs=EPOCHS)
-model.fit(X,y)
+if __name__ == '__main__':
 
-_ = model.total_loss()
-
-save_model(model, filename="and.model")
-save_plot(df, "and.png", model)
+    # AND data
+    AND = {
+        "x1": [0,0,1,1],
+        "x2": [0,1,0,1],
+        "y": [0,0,0,1],
+    }
+    ETA = 0.3 # b/w 0 and 1
+    EPOCHS = 10
+    main(data=AND, modelName="and.model", plotName="and.png", eta=ETA, epochs=EPOCHS)
