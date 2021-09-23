@@ -7,8 +7,16 @@ from matplotlib.colors import ListedColormap
 
 plt.style.use('fivethirtyeight') # Style of graphs
 
-
+ 
 def prepare_data(df):
+  """It is used to seperate the dependant(y) and independent(x) labels/data        
+
+  Args:
+      df (pd.DataFrame): It is used to create a pandas dataframe
+
+  Returns:
+      tuple: returns the tuples of the dependent and independent labels/data/variables 
+  """
   X = df.drop("y",axis=1)
 
   y = df["y"] 
@@ -18,6 +26,12 @@ def prepare_data(df):
 
 
 def save_model(model, filename):
+  """It is used to save the trained model 
+
+  Args:
+      model (python object): It is a trained model
+      filename (string/str ): Path to save the trained model
+  """
   model_dir = "models"
   os.makedirs(model_dir, exist_ok=True) # ONLY CREATE IF MODEL_DIR DOESN"T EXISTS
   filePath = os.path.join(model_dir, filename) # model/filename
@@ -26,6 +40,12 @@ def save_model(model, filename):
 
 
 def save_plot(df, file_name, model):
+  """
+  :param df: It is pandas dataframe 
+  :param file_name: It is the path to save the plot 
+  :param model: It is the trained model
+
+  """
   def _create_base_plot(df):
     df.plot(kind="scatter", x="x1", y="x2", c="y", s=100, cmap="winter")
     plt.axhline(y=0, color="black", linestyle="--", linewidth=1)
