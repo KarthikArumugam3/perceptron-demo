@@ -1,3 +1,8 @@
+""" 
+Author: Karthik Arumugam
+Email: karthik131100@gmail.com
+"""
+
 from numpy.lib.npyio import save
 from utils.model import Perceptron
 from utils.all_utils import prepare_data, save_plot, save_model

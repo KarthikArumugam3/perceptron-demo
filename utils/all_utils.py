@@ -1,3 +1,8 @@
+""" 
+Author: Karthik Arumugam
+Email: karthik131100@gmail.com
+"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd

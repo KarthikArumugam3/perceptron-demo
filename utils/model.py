@@ -1,3 +1,8 @@
+""" 
+Author: Karthik Arumugam
+Email: karthik131100@gmail.com
+"""
+
 import numpy as np
 
 class Perceptron:
@@ -41,4 +46,3 @@ class Perceptron:
     total_loss = np.sum(self.error)
     print(f"total loss: {total_loss}")
     return total_loss
-    
