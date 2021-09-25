@@ -40,11 +40,11 @@ if __name__ == '__main__':
         "y": [0,1,1,1],
     }
     ETA = 0.3 # b/w 0 and 1
-    EPOCHS = 100
+    EPOCHS = 10
     try:
-        logging.info(">>>>>>> Starting training >>>>>>>")
+        logging.info(">>>>>>> Starting OR training >>>>>>>")
         main(data=OR, modelName="or.model", plotName="or.png", eta=ETA, epochs=EPOCHS)
-        logging.info("<<<<<<< Training done successfully <<<<<<<\n")
+        logging.info("<<<<<<< OR Training done successfully <<<<<<<\n")
     except Exception as e:
         logging.exception(e)
         raise e
