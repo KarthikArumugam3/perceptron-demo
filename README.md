@@ -9,6 +9,9 @@ In this project I have demonstrated how a perceptron works on classiying a set o
 
 This project shows how the weights are updated using the Weight update rule after each forward propagation and againg used in the next iteration to calculate the output untill zero loss is achieved.
 
+## Article explaining perceptron:- 
+[What is Perceptron?](https://towardsdatascience.com/what-the-hell-is-perceptron-626217814f53)
+
 ### Ex:- AND dataset
 x1 | x2 | y
 -|-|-
