@@ -8,3 +8,17 @@ In machine learning, the perceptron is an algorithm for supervised learning of b
 In this project I have demonstrated how a perceptron works on classiying a set of data based on the inputs and the weights associated for each of those set of inputs.
 
 This project shows how the weights are updated using the Weight update rule after each forward propagation and againg used in the next iteration to calculate the output untill zero loss is achieved.
+
+### Ex:- AND dataset
+x1 | x2 | y
+-|-|-
+0|0|1 
+0|1|0
+1|0|0
+1|1|1
+
+#### Image - Plotting the decision regions/boundaries:- AND dataset
+
+![sample Image](plots/and.png)
+
+ 
