@@ -24,4 +24,5 @@ x1 | x2 | y
 
 ![sample Image](plots/and.png)
 
- 
+##### Jupyter NB implementation
+[Perceptron.ipynb](https://colab.research.google.com/drive/1ahYNbOtbHcu82wiiBXV6aAYufAcvjm_X?authuser=1)
